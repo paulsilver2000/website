@@ -1,0 +1,842 @@
+{
+  "version": "7.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "WebsiteStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "WebsiteStack.template.json"
+      },
+      "metadata": {
+        "/WebsiteStack/KeyPair": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyPair",
+            "trace": [
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:14:21)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/LatestAMI": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LatestAMI",
+            "trace": [
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:22:23)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/WebsiteVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteVPCD8B49DC8",
+            "trace": [
+              "new Vpc (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1199:21)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:30:17)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/WebsiteVPC/publicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteVPCpublicSubnet1Subnet8F93AE85",
+            "trace": [
+              "new Subnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1533:20)",
+              "new PublicSubnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1350:12)",
+              "new Vpc (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:30:17)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/WebsiteVPC/publicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteVPCpublicSubnet1RouteTableF14274A6",
+            "trace": [
+              "new Subnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1551:19)",
+              "new PublicSubnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1350:12)",
+              "new Vpc (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:30:17)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/WebsiteVPC/publicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteVPCpublicSubnet1RouteTableAssociationBCEF456E",
+            "trace": [
+              "new Subnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:5)",
+              "new PublicSubnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1350:12)",
+              "new Vpc (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:30:17)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/WebsiteVPC/publicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteVPCpublicSubnet1DefaultRoute86DB016D",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1573:19)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1247:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1246:46)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:30:17)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/WebsiteVPC/publicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteVPCpublicSubnet2Subnet370560E0",
+            "trace": [
+              "new Subnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1533:20)",
+              "new PublicSubnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1350:12)",
+              "new Vpc (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:30:17)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/WebsiteVPC/publicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteVPCpublicSubnet2RouteTable2F7E15E9",
+            "trace": [
+              "new Subnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1551:19)",
+              "new PublicSubnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1350:12)",
+              "new Vpc (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:30:17)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/WebsiteVPC/publicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteVPCpublicSubnet2RouteTableAssociation936DE3B4",
+            "trace": [
+              "new Subnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1557:5)",
+              "new PublicSubnet (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1748:5)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1379:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1361:28)",
+              "Vpc.createSubnets (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1350:12)",
+              "new Vpc (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1228:10)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:30:17)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/WebsiteVPC/publicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteVPCpublicSubnet2DefaultRouteB89691E7",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1573:19)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1247:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1246:46)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:30:17)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/WebsiteVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteVPCIGWD7296D39",
+            "trace": [
+              "new Vpc (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1235:19)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:30:17)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/WebsiteVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebsiteVPCVPCGW9965E50A",
+            "trace": [
+              "new Vpc (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1241:19)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:30:17)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/NewsBlogRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NewsBlogRole6F2BF73E",
+            "trace": [
+              "new Role (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:45:16)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/NewsBlogAutoScalingGroup": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "desiredCapacity has been configured. Be aware this will reset the size of your AutoScalingGroup on every deployment. See https://github.com/aws/aws-cdk/issues/5215",
+            "trace": [
+              "Annotations.addMessage (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-autoscaling/node_modules/@aws-cdk/core/lib/annotations.ts:92:25)",
+              "Annotations.addWarning (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-autoscaling/node_modules/@aws-cdk/core/lib/annotations.ts:31:10)",
+              "new AutoScalingGroup (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.ts:983:28)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:61:15)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/NewsBlogAutoScalingGroup/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NewsBlogAutoScalingGroupInstanceSecurityGroup3BB44488",
+            "trace": [
+              "new SecurityGroup (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:395:26)",
+              "new AutoScalingGroup (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.ts:913:49)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:61:15)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/NewsBlogAutoScalingGroup/InstanceSecurityGroup/from WebsiteStackLBSecurityGroupB29745CF:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NewsBlogAutoScalingGroupInstanceSecurityGroupfromWebsiteStackLBSecurityGroupB29745CF807D785AAB",
+            "trace": [
+              "SecurityGroup.addIngressRule (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:88:7)",
+              "SecurityGroup.addIngressRule (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:412:13)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:154:23",
+              "ReactiveList.forEachAndForever (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:267:7)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:153:45",
+              "ReactiveList.forEachAndForever (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:267:7)",
+              "Connections.allowFrom (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:152:26)",
+              "ApplicationListener.registerConnectable (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:457:29)",
+              "ApplicationTargetGroup.registerListener (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.ts:161:16)",
+              "TargetGroupListenerAction.bind (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener-action.ts:441:10)",
+              "ApplicationListener.setDefaultAction (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:475:12)",
+              "ApplicationListener.addTargetGroups (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:335:12)",
+              "ApplicationListener.addTargets (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:371:10)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:84:12)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/NewsBlogAutoScalingGroup/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NewsBlogAutoScalingGroupInstanceProfile7F6AC159",
+            "trace": [
+              "new AutoScalingGroup (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.ts:932:24)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:61:15)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/NewsBlogAutoScalingGroup/LaunchConfig": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NewsBlogAutoScalingGroupLaunchConfig4561DC98",
+            "trace": [
+              "new AutoScalingGroup (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.ts:942:26)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:61:15)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/NewsBlogAutoScalingGroup/ASG": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NewsBlogAutoScalingGroupASG9863ACD0",
+            "trace": [
+              "new AutoScalingGroup (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.ts:1031:29)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:61:15)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/NewsBlogAutoScalingGroup/ScalingPolicyAModestLoad-WebsiteStack--NewsBlogAutoScalingGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NewsBlogAutoScalingGroupScalingPolicyAModestLoadWebsiteStackNewsBlogAutoScalingGroupBAB38614",
+            "trace": [
+              "new TargetTrackingScalingPolicy (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-autoscaling/lib/target-tracking-scaling-policy.ts:127:21)",
+              "AutoScalingGroup.scaleOnRequestCount (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.ts:783:20)",
+              "/Users/pasilver/work/aws/website/lib/website-stack.ts:91:9",
+              "Array.forEach (<anonymous>)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:90:21)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ssm/lib/parameter.ts:328:9)",
+              "Function.valueForTypedStringParameter (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ssm/lib/parameter.ts:398:17)",
+              "AmazonLinuxImage.getImage (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/machine-image.ts:140:37)",
+              "new AutoScalingGroup (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.ts:937:44)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:61:15)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LB8A12904C",
+            "trace": [
+              "new BaseLoadBalancer (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-load-balancer.ts:208:22)",
+              "new ApplicationLoadBalancer (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.ts:85:5)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:73:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBSecurityGroup8A41EA2B",
+            "trace": [
+              "new SecurityGroup (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:395:26)",
+              "new ApplicationLoadBalancer (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.ts:92:52)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:73:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/LB/SecurityGroup/to WebsiteStackNewsBlogAutoScalingGroupInstanceSecurityGroup2204B94E:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBSecurityGrouptoWebsiteStackNewsBlogAutoScalingGroupInstanceSecurityGroup2204B94E80FC90B7D6",
+            "trace": [
+              "SecurityGroup.addEgressRule (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:106:7)",
+              "SecurityGroup.addEgressRule (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:442:13)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:131:23",
+              "ReactiveList.forEachAndForever (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:267:7)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:130:45",
+              "ReactiveList.forEachAndForever (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:267:7)",
+              "Connections.allowTo (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:129:26)",
+              "Connections.allowFrom (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-ec2/lib/connections.ts:161:25)",
+              "ApplicationListener.registerConnectable (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:457:29)",
+              "ApplicationTargetGroup.registerListener (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.ts:161:16)",
+              "TargetGroupListenerAction.bind (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener-action.ts:441:10)",
+              "ApplicationListener.setDefaultAction (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:475:12)",
+              "ApplicationListener.addTargetGroups (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:335:12)",
+              "ApplicationListener.addTargets (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:371:10)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:84:12)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/LB/Listener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBListener49E825B4",
+            "trace": [
+              "new BaseListener (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-listener.ts:109:22)",
+              "new ApplicationListener (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:191:5)",
+              "ApplicationLoadBalancer.addListener (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.ts:107:12)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:78:23)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/LB/Listener/TargetsGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBListenerTargetsGroup76EF81E8",
+            "trace": [
+              "new TargetGroupBase (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.ts:237:21)",
+              "new ApplicationTargetGroup (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.ts:95:5)",
+              "ApplicationListener.addTargets (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.ts:359:19)",
+              "new WebsiteStack (/Users/pasilver/work/aws/website/lib/website-stack.ts:84:12)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/bin/website.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Module.m._compile (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/pasilver/work/aws/website/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "main (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/pasilver/work/aws/website/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1102:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1131:10)",
+              "Module.load (node:internal/modules/cjs/loader:967:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:807:14)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/WebsiteStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (node:events:483:26)",
+              "process.emit (node:events:376:20)",
+              "process.EventEmitter.emit (node:domain:470:12)",
+              "process.emit (/Users/pasilver/work/aws/website/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/WebsiteStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:60:27)",
+              "/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/pasilver/work/aws/website/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (node:events:483:26)",
+              "process.emit (node:events:376:20)",
+              "process.EventEmitter.emit (node:domain:470:12)",
+              "process.emit (/Users/pasilver/work/aws/website/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

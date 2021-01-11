@@ -1,0 +1,705 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "WebsiteStack": {
+        "id": "WebsiteStack",
+        "path": "WebsiteStack",
+        "children": {
+          "KeyPair": {
+            "id": "KeyPair",
+            "path": "WebsiteStack/KeyPair"
+          },
+          "LatestAMI": {
+            "id": "LatestAMI",
+            "path": "WebsiteStack/LatestAMI"
+          },
+          "WebsiteVPC": {
+            "id": "WebsiteVPC",
+            "path": "WebsiteStack/WebsiteVPC",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "WebsiteStack/WebsiteVPC/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+                  "aws:cdk:cloudformation:props": {
+                    "cidrBlock": "10.40.0.0/16",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "instanceTenancy": "default",
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "WebsiteStack/WebsiteVPC"
+                      }
+                    ]
+                  }
+                }
+              },
+              "publicSubnet1": {
+                "id": "publicSubnet1",
+                "path": "WebsiteStack/WebsiteVPC/publicSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "WebsiteStack/WebsiteVPC/publicSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.40.0.0/24",
+                        "vpcId": {
+                          "Ref": "WebsiteVPCD8B49DC8"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "public"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "WebsiteStack/WebsiteVPC/publicSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "WebsiteStack/WebsiteVPC/publicSubnet1/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "WebsiteStack/WebsiteVPC/publicSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "WebsiteVPCD8B49DC8"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "WebsiteStack/WebsiteVPC/publicSubnet1"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "WebsiteStack/WebsiteVPC/publicSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "WebsiteVPCpublicSubnet1RouteTableF14274A6"
+                        },
+                        "subnetId": {
+                          "Ref": "WebsiteVPCpublicSubnet1Subnet8F93AE85"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "WebsiteStack/WebsiteVPC/publicSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "WebsiteVPCpublicSubnet1RouteTableF14274A6"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "WebsiteVPCIGWD7296D39"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "publicSubnet2": {
+                "id": "publicSubnet2",
+                "path": "WebsiteStack/WebsiteVPC/publicSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "WebsiteStack/WebsiteVPC/publicSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "cidrBlock": "10.40.1.0/24",
+                        "vpcId": {
+                          "Ref": "WebsiteVPCD8B49DC8"
+                        },
+                        "availabilityZone": {
+                          "Fn::Select": [
+                            1,
+                            {
+                              "Fn::GetAZs": ""
+                            }
+                          ]
+                        },
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "public"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "WebsiteStack/WebsiteVPC/publicSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "WebsiteStack/WebsiteVPC/publicSubnet2/Acl"
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "WebsiteStack/WebsiteVPC/publicSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "WebsiteVPCD8B49DC8"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "WebsiteStack/WebsiteVPC/publicSubnet2"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "WebsiteStack/WebsiteVPC/publicSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "WebsiteVPCpublicSubnet2RouteTable2F7E15E9"
+                        },
+                        "subnetId": {
+                          "Ref": "WebsiteVPCpublicSubnet2Subnet370560E0"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "WebsiteStack/WebsiteVPC/publicSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "WebsiteVPCpublicSubnet2RouteTable2F7E15E9"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "WebsiteVPCIGWD7296D39"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "IGW": {
+                "id": "IGW",
+                "path": "WebsiteStack/WebsiteVPC/IGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "WebsiteStack/WebsiteVPC"
+                      }
+                    ]
+                  }
+                }
+              },
+              "VPCGW": {
+                "id": "VPCGW",
+                "path": "WebsiteStack/WebsiteVPC/VPCGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                  "aws:cdk:cloudformation:props": {
+                    "vpcId": {
+                      "Ref": "WebsiteVPCD8B49DC8"
+                    },
+                    "internetGatewayId": {
+                      "Ref": "WebsiteVPCIGWD7296D39"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "NewsBlogRole": {
+            "id": "NewsBlogRole",
+            "path": "WebsiteStack/NewsBlogRole",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "WebsiteStack/NewsBlogRole/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "ec2.",
+                                  {
+                                    "Ref": "AWS::URLSuffix"
+                                  }
+                                ]
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "managedPolicyArns": [
+                      {
+                        "Fn::Join": [
+                          "",
+                          [
+                            "arn:",
+                            {
+                              "Ref": "AWS::Partition"
+                            },
+                            ":iam::aws:policy/AmazonSSMManagedInstanceCore"
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "NewsBlogAutoScalingGroup": {
+            "id": "NewsBlogAutoScalingGroup",
+            "path": "WebsiteStack/NewsBlogAutoScalingGroup",
+            "children": {
+              "InstanceSecurityGroup": {
+                "id": "InstanceSecurityGroup",
+                "path": "WebsiteStack/NewsBlogAutoScalingGroup/InstanceSecurityGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "WebsiteStack/NewsBlogAutoScalingGroup/InstanceSecurityGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "groupDescription": "WebsiteStack/NewsBlogAutoScalingGroup/InstanceSecurityGroup",
+                        "securityGroupEgress": [
+                          {
+                            "cidrIp": "0.0.0.0/0",
+                            "description": "Allow all outbound traffic by default",
+                            "ipProtocol": "-1"
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "WebsiteStack/NewsBlogAutoScalingGroup"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "WebsiteVPCD8B49DC8"
+                        }
+                      }
+                    }
+                  },
+                  "from WebsiteStackLBSecurityGroupB29745CF:80": {
+                    "id": "from WebsiteStackLBSecurityGroupB29745CF:80",
+                    "path": "WebsiteStack/NewsBlogAutoScalingGroup/InstanceSecurityGroup/from WebsiteStackLBSecurityGroupB29745CF:80",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupIngress",
+                      "aws:cdk:cloudformation:props": {
+                        "ipProtocol": "tcp",
+                        "description": "Load balancer to target",
+                        "fromPort": 80,
+                        "groupId": {
+                          "Fn::GetAtt": [
+                            "NewsBlogAutoScalingGroupInstanceSecurityGroup3BB44488",
+                            "GroupId"
+                          ]
+                        },
+                        "sourceSecurityGroupId": {
+                          "Fn::GetAtt": [
+                            "LBSecurityGroup8A41EA2B",
+                            "GroupId"
+                          ]
+                        },
+                        "toPort": 80
+                      }
+                    }
+                  }
+                }
+              },
+              "InstanceProfile": {
+                "id": "InstanceProfile",
+                "path": "WebsiteStack/NewsBlogAutoScalingGroup/InstanceProfile",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::InstanceProfile",
+                  "aws:cdk:cloudformation:props": {
+                    "roles": [
+                      {
+                        "Ref": "NewsBlogRole6F2BF73E"
+                      }
+                    ]
+                  }
+                }
+              },
+              "LaunchConfig": {
+                "id": "LaunchConfig",
+                "path": "WebsiteStack/NewsBlogAutoScalingGroup/LaunchConfig",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::AutoScaling::LaunchConfiguration",
+                  "aws:cdk:cloudformation:props": {
+                    "imageId": {
+                      "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+                    },
+                    "instanceType": "t3.micro",
+                    "iamInstanceProfile": {
+                      "Ref": "NewsBlogAutoScalingGroupInstanceProfile7F6AC159"
+                    },
+                    "securityGroups": [
+                      {
+                        "Fn::GetAtt": [
+                          "NewsBlogAutoScalingGroupInstanceSecurityGroup3BB44488",
+                          "GroupId"
+                        ]
+                      }
+                    ],
+                    "userData": {
+                      "Fn::Base64": "#!/bin/bash\nyum install -y nginx\nchkconfig nginx on\nservice nginx start\n/bin/mv /usr/share/nginx/html/index.html /usr/share/nginx/html/index.html.orig\n/bin/echo \"Hello World from $(hostname -f) on port 80\" >  /usr/share/nginx/html/index.html"
+                    }
+                  }
+                }
+              },
+              "ASG": {
+                "id": "ASG",
+                "path": "WebsiteStack/NewsBlogAutoScalingGroup/ASG",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::AutoScaling::AutoScalingGroup",
+                  "aws:cdk:cloudformation:props": {
+                    "maxSize": "2",
+                    "minSize": "1",
+                    "desiredCapacity": "2",
+                    "launchConfigurationName": {
+                      "Ref": "NewsBlogAutoScalingGroupLaunchConfig4561DC98"
+                    },
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "WebsiteStack/NewsBlogAutoScalingGroup",
+                        "propagateAtLaunch": true
+                      }
+                    ],
+                    "targetGroupArns": [
+                      {
+                        "Ref": "LBListenerTargetsGroup76EF81E8"
+                      }
+                    ],
+                    "vpcZoneIdentifier": [
+                      {
+                        "Ref": "WebsiteVPCpublicSubnet1Subnet8F93AE85"
+                      },
+                      {
+                        "Ref": "WebsiteVPCpublicSubnet2Subnet370560E0"
+                      }
+                    ]
+                  }
+                }
+              },
+              "ScalingPolicyAModestLoad-WebsiteStack--NewsBlogAutoScalingGroup": {
+                "id": "ScalingPolicyAModestLoad-WebsiteStack--NewsBlogAutoScalingGroup",
+                "path": "WebsiteStack/NewsBlogAutoScalingGroup/ScalingPolicyAModestLoad-WebsiteStack--NewsBlogAutoScalingGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "WebsiteStack/NewsBlogAutoScalingGroup/ScalingPolicyAModestLoad-WebsiteStack--NewsBlogAutoScalingGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AutoScaling::ScalingPolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "autoScalingGroupName": {
+                          "Ref": "NewsBlogAutoScalingGroupASG9863ACD0"
+                        },
+                        "policyType": "TargetTrackingScaling",
+                        "targetTrackingConfiguration": {
+                          "predefinedMetricSpecification": {
+                            "predefinedMetricType": "ALBRequestCountPerTarget",
+                            "resourceLabel": {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  {
+                                    "Fn::Select": [
+                                      1,
+                                      {
+                                        "Fn::Split": [
+                                          "/",
+                                          {
+                                            "Ref": "LBListener49E825B4"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "/",
+                                  {
+                                    "Fn::Select": [
+                                      2,
+                                      {
+                                        "Fn::Split": [
+                                          "/",
+                                          {
+                                            "Ref": "LBListener49E825B4"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "/",
+                                  {
+                                    "Fn::Select": [
+                                      3,
+                                      {
+                                        "Fn::Split": [
+                                          "/",
+                                          {
+                                            "Ref": "LBListener49E825B4"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "/",
+                                  {
+                                    "Fn::GetAtt": [
+                                      "LBListenerTargetsGroup76EF81E8",
+                                      "TargetGroupFullName"
+                                    ]
+                                  }
+                                ]
+                              ]
+                            }
+                          },
+                          "targetValue": 60
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": {
+            "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
+            "path": "WebsiteStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter"
+          },
+          "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118": {
+            "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "path": "WebsiteStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118"
+          },
+          "LB": {
+            "id": "LB",
+            "path": "WebsiteStack/LB",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "WebsiteStack/LB/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+                  "aws:cdk:cloudformation:props": {
+                    "loadBalancerAttributes": [
+                      {
+                        "key": "deletion_protection.enabled",
+                        "value": "false"
+                      }
+                    ],
+                    "scheme": "internet-facing",
+                    "securityGroups": [
+                      {
+                        "Fn::GetAtt": [
+                          "LBSecurityGroup8A41EA2B",
+                          "GroupId"
+                        ]
+                      }
+                    ],
+                    "subnets": [
+                      {
+                        "Ref": "WebsiteVPCpublicSubnet1Subnet8F93AE85"
+                      },
+                      {
+                        "Ref": "WebsiteVPCpublicSubnet2Subnet370560E0"
+                      }
+                    ],
+                    "type": "application"
+                  }
+                }
+              },
+              "SecurityGroup": {
+                "id": "SecurityGroup",
+                "path": "WebsiteStack/LB/SecurityGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "WebsiteStack/LB/SecurityGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "groupDescription": "Automatically created Security Group for ELB WebsiteStackLB2004CDF4",
+                        "securityGroupIngress": [
+                          {
+                            "cidrIp": "0.0.0.0/0",
+                            "ipProtocol": "tcp",
+                            "fromPort": 80,
+                            "toPort": 80,
+                            "description": "Allow from anyone on port 80"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "WebsiteVPCD8B49DC8"
+                        }
+                      }
+                    }
+                  },
+                  "to WebsiteStackNewsBlogAutoScalingGroupInstanceSecurityGroup2204B94E:80": {
+                    "id": "to WebsiteStackNewsBlogAutoScalingGroupInstanceSecurityGroup2204B94E:80",
+                    "path": "WebsiteStack/LB/SecurityGroup/to WebsiteStackNewsBlogAutoScalingGroupInstanceSecurityGroup2204B94E:80",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroupEgress",
+                      "aws:cdk:cloudformation:props": {
+                        "groupId": {
+                          "Fn::GetAtt": [
+                            "LBSecurityGroup8A41EA2B",
+                            "GroupId"
+                          ]
+                        },
+                        "ipProtocol": "tcp",
+                        "description": "Load balancer to target",
+                        "destinationSecurityGroupId": {
+                          "Fn::GetAtt": [
+                            "NewsBlogAutoScalingGroupInstanceSecurityGroup3BB44488",
+                            "GroupId"
+                          ]
+                        },
+                        "fromPort": 80,
+                        "toPort": 80
+                      }
+                    }
+                  }
+                }
+              },
+              "Listener": {
+                "id": "Listener",
+                "path": "WebsiteStack/LB/Listener",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "WebsiteStack/LB/Listener/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::Listener",
+                      "aws:cdk:cloudformation:props": {
+                        "defaultActions": [
+                          {
+                            "type": "forward",
+                            "targetGroupArn": {
+                              "Ref": "LBListenerTargetsGroup76EF81E8"
+                            }
+                          }
+                        ],
+                        "loadBalancerArn": {
+                          "Ref": "LB8A12904C"
+                        },
+                        "port": 80,
+                        "protocol": "HTTP"
+                      }
+                    }
+                  },
+                  "TargetsGroup": {
+                    "id": "TargetsGroup",
+                    "path": "WebsiteStack/LB/Listener/TargetsGroup",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "WebsiteStack/LB/Listener/TargetsGroup/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+                          "aws:cdk:cloudformation:props": {
+                            "port": 80,
+                            "protocol": "HTTP",
+                            "targetType": "instance",
+                            "vpcId": {
+                              "Ref": "WebsiteVPCD8B49DC8"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "WebsiteStack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "WebsiteStack/CDKMetadata/Default"
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "WebsiteStack/CDKMetadata/Condition"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
